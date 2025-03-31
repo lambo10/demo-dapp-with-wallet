@@ -1,0 +1,77 @@
+.token-list {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 3px;
+
+    &:hover {
+      background: var(--scrollbar-thumb-hover);
+    }
+  }
+
+  .token-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+      background: var(--hover-background);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .token-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      .token-logo {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: contain;
+      }
+
+      .token-details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        .token-symbol {
+          font-weight: 600;
+          color: var(--text-color);
+        }
+
+        .token-name {
+          font-size: 0.875rem;
+          color: var(--text-secondary);
+        }
+      }
+    }
+
+    .token-address {
+      font-family: monospace;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+  }
+} 

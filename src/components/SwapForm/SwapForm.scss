@@ -1,0 +1,184 @@
+.swap-form {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--background-primary);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+
+  .swap-input-container {
+    background: var(--background-secondary);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+
+    .token-select {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 8px;
+      background: var(--background-primary);
+
+      .selected-token {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+
+        .token-logo {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          object-fit: contain;
+        }
+      }
+
+      .select-token {
+        color: var(--text-secondary);
+      }
+    }
+
+    .amount-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      font-size: 24px;
+      color: var(--text-primary);
+      outline: none;
+
+      &::placeholder {
+        color: var(--text-secondary);
+      }
+    }
+
+    .estimated-output {
+      font-size: 24px;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+  }
+
+  .swap-arrow {
+    text-align: center;
+    font-size: 24px;
+    color: var(--text-secondary);
+    margin: 16px 0;
+  }
+
+  .slippage-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0;
+    padding: 12px;
+    background: var(--background-secondary);
+    border-radius: 8px;
+
+    label {
+      color: var(--text-secondary);
+    }
+
+    input {
+      width: 80px;
+      background: var(--background-primary);
+      border: 1px solid var(--text-secondary);
+      border-radius: 4px;
+      padding: 4px 8px;
+      color: var(--text-primary);
+    }
+  }
+
+  .swap-button, .connect-button {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &.swap-button {
+      background: var(--accent);
+      color: white;
+
+      &:hover {
+        opacity: 0.9;
+      }
+
+      &:disabled {
+        background: var(--text-secondary);
+        cursor: not-allowed;
+      }
+    }
+
+    &.connect-button {
+      background: var(--connectButton-background);
+      color: var(--connectButton-foreground);
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .token-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    .modal-content {
+      background: var(--background-primary);
+      border-radius: 16px;
+      padding: 20px;
+      width: 90%;
+      max-width: 480px;
+      max-height: 80vh;
+      overflow-y: auto;
+
+      .search-input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid var(--text-secondary);
+        border-radius: 8px;
+        background: var(--background-secondary);
+        color: var(--text-primary);
+        margin-bottom: 16px;
+
+        &::placeholder {
+          color: var(--text-secondary);
+        }
+      }
+
+      .token-list {
+        max-height: 400px;
+        overflow-y: auto;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 16px;
+        border: none;
+        border-radius: 8px;
+        background: var(--background-secondary);
+        color: var(--text-primary);
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+} 

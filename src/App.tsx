@@ -3,7 +3,7 @@ import './trackers';
 import {THEME, TonConnectUIProvider} from "@tonconnect/ui-react";
 import {Footer} from "./components/Footer/Footer";
 import {Header} from "./components/Header/Header";
-import {TxForm} from "./components/TxForm/TxForm";
+import {SwapForm} from "./components/SwapForm/SwapForm";
 
 function App() {
   return (
@@ -329,7 +329,7 @@ function App() {
     >
       <div className="app">
         <Header/>
-        <TxForm/>
+        <SwapForm/>
         {/*<TonProofDemo />*/}
         <Footer/>
       </div>

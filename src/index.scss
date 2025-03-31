@@ -2,21 +2,67 @@ html, body, #root {
   height: 100%;
 }
 
-body {
+:root {
+  // Colors
+  --primary-color: #0088cc;
+  --primary-color-hover: #0077b3;
+  --secondary-color: #f5f5f5;
+  --secondary-color-hover: #e5e5e5;
+  --background-color: #ffffff;
+  --input-background: #f8f9fa;
+  --border-color: #e9ecef;
+  --text-color: #212529;
+  --text-secondary: #6c757d;
+  --disabled-color: #adb5bd;
+  --hover-background: #f1f3f5;
+  
+  // Scrollbar
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #c1c1c1;
+  --scrollbar-thumb-hover: #a8a8a8;
+}
+
+[data-theme="dark"] {
+  --primary-color: #0088cc;
+  --primary-color-hover: #0077b3;
+  --secondary-color: #2d2d2d;
+  --secondary-color-hover: #3d3d3d;
+  --background-color: #1a1a1a;
+  --input-background: #2d2d2d;
+  --border-color: #404040;
+  --text-color: #ffffff;
+  --text-secondary: #a0a0a0;
+  --disabled-color: #404040;
+  --hover-background: #2d2d2d;
+  
+  // Scrollbar
+  --scrollbar-track: #2d2d2d;
+  --scrollbar-thumb: #404040;
+  --scrollbar-thumb-hover: #505050;
+}
+
+* {
   margin: 0;
-  background-color: rgba(16, 22, 31, 0.92);;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+button {
+  font-family: inherit;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
-}
-
-* {
-  box-sizing: border-box;
 }
